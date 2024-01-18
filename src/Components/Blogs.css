@@ -1,0 +1,42 @@
+li{
+    list-style: none;
+    display: inline;
+}
+/* listFont{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold
+} */
+.img-1{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+.img-2{
+    width: 620px;
+    height: 280px;
+    border-radius: 10px;
+    margin-left: 120px;
+}
+li{
+    margin-top: 0px;
+    padding: 0px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+.btn{
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: green;
+    color: white;
+    place-items: right;
+}
+.bold{
+    color: green;
+}
+.icn{
+    margin-left: 15px;
+}
+.listDiv:hover{
+    background-color: aquamarine;
+}

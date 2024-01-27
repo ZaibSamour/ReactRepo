@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getPostId } from "../Utils";
+import "./Blogs.css";
 
 const BlogsDetails = () => {
   const navigate = useNavigate();
   const [post, setPost] = useState();
   const { id } = useParams();
-  console.log(id);
+
   useEffect(() => {
     setPost(getPostId(id));
   }, []);
@@ -14,18 +15,27 @@ const BlogsDetails = () => {
     <>
       {post && (
         <>
-          <h1>{post.title}</h1>
+          <div className="container mt-5 ">
+            <div className="row mt-5 mrgn-Title-Body-Blog-D">
+              <h3 className="headingBlogDetail">{post.title}</h3>
+            </div>
 
-          <p>{post.detail}</p>
+            <div className="row mt-1 mrgn-Title-Body-Blog-D">
+              <p>{post.body}</p>
+            </div>
 
-          <button
-            style={{ marginLeft: "900px" }}
-            type="button"
-            class="btn btn-primary float-right"
-            onClick={() => navigate("/")}
-          >
-            Go back
-          </button>
+            <div className="row mt-3 ">
+              <div className="col imgRight">
+                <button
+                  type="button"
+                  class="btn btn-primary "
+                  onClick={() => navigate("/")}
+                >
+                  Go back
+                </button>
+              </div>
+            </div>
+          </div>
         </>
       )}
     </>
